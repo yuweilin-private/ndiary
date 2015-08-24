@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://sdk.amazonaws.com/js/aws-sdk-2.1.20.min.js'></script>
+    <script src='https://apis.google.com/js/client.js'></script>
+    <script src='underscore-min.js'></script>
+    <script src='util.js'></script>
+    <script src='sync-interface.js'></script>
+    <script src='template.js'></script>
+    <script src='main.js'></script>
+    
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- sign-in button -->
+    <input type="button" id="btn-signin" value="Sign In">
+
+    <!-- edit -->
+    <div id="page-edit">
+        <h2>Card Edit</h2>
+    </div>
+    
+    <!-- all cards -->
+    <div id="page-cards">
+        <h2>All Cards</h2>
+        Date: <input type="date" name="date"><br>
+        <ul id="card-list"><span id="end-card-list"></span></ul>
+    </div>
+    
+    <!-- all groups -->
+    <div id="page-groups">
+        <h2>All Groups</h2>
+        <ul id="group-list"></ul>
+    </div>
+    
+</body>
+</html>
