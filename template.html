@@ -16,7 +16,17 @@
 <template is="dom-bind">
     <paper-scroll-header-panel class="flex">
         <paper-toolbar>
-            <div>Header</div>
+            <div flex>
+            <paper-dropdown-menu label="Type of View" no-label-float style="width: 60%">
+                <paper-menu class="dropdown-content" selected="0">
+                    <paper-item>Timeline</paper-item>
+                    <paper-item>Map</paper-item>
+                    <paper-item>Picture</paper-item>
+                    <paper-item>Statistic</paper-item>
+                </paper-menu>
+            </paper-dropdown-menu>
+            </div>
+            <paper-icon-button icon="search"></paper-icon-button>
         </paper-toolbar>
 
         <iron-pages selected="{{selected}}">
