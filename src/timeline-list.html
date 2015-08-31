@@ -1,0 +1,27 @@
+<dom-module id="timeline-list">
+
+    <style>
+        paper-card {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+    </style>
+
+    <template>
+        <template is="dom-repeat" items="{{cards}}" as="card">
+            <paper-card heading="{{card.title}}">
+                <div class="card-content">{{card.content}}</div>
+            </paper-card>
+        </template>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'timeline-list',
+            properties: {
+                cards: Array
+            }
+        });
+    </script>
+
+</dom-module>

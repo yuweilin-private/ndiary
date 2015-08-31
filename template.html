@@ -30,7 +30,9 @@
         </paper-toolbar>
 
         <iron-pages selected="{{selected}}">
-            <div>Page 1</div>
+            <div id="view">
+                <timeline-list></timeline-list>
+            </div>
             <div>Page 2</div>
             <div>Page 3</div>
             <div>Page 4</div>
@@ -56,12 +58,18 @@
         var tabs = document.querySelector('paper-tabs');
         var pages = document.querySelector('iron-pages');
         var button = document.querySelector('paper-button');
-        
+        var timeline = document.querySelector('timeline-list');
+
         tabs.selected = "0";
         
         button.addEventListener('click', function(){
             pages.selectNext();
         });
+        
+        timeline.cards = [              
+            {'title': 'AAA', 'content': 'aaa'},
+            {'title': 'BBB', 'content': 'bbb'}
+        ];
     });
 </script>
 </body>
