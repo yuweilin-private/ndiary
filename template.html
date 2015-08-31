@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <!-- Polymer -->
+    <script src="lib/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="lib/elements.html">
+</head>
+<body class="fullbleed layout vertical">
+<template is="dom-bind">
+    <paper-scroll-header-panel class="flex">
+        <paper-toolbar>
+            <div>Header</div>
+        </paper-toolbar>
+        <iron-pages selected="{{selected}}">
+            <div>Page 1</div>
+            <div>Page 2</div>
+            <div>Page 3</div>
+            <div>Page 4</div>
+        </iron-pages>
+        <paper-tabs selected="{{selected}}">
+            <paper-tab>Tab 1</paper-tab>
+            <paper-tab>Tab 2</paper-tab>
+            <paper-tab>Tab 3</paper-tab>
+            <paper-tab>Tab 4</paper-tab>
+        </paper-tabs>
+        <paper-button>Next Page</paper-button>
+    </paper-scroll-header-panel>
+</template>
+
+<script>
+    document.addEventListener('WebComponentsReady', function() {
+        var tabs = document.querySelector('paper-tabs');
+        var pages = document.querySelector('iron-pages');
+        var button = document.querySelector('paper-button');
+        
+        tabs.selected = "0";
+        
+        button.addEventListener('click', function(){
+            pages.selectNext();
+        });
+    });
+</script>
+</body>
+</html>
