@@ -6,6 +6,11 @@
     <!-- Polymer -->
     <script src="lib/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
     <link rel="import" href="lib/elements.html">
+    <style>
+        #block {
+            height: 600px
+        }
+    </style>
 </head>
 <body class="fullbleed layout vertical">
 <template is="dom-bind">
@@ -13,20 +18,27 @@
         <paper-toolbar>
             <div>Header</div>
         </paper-toolbar>
+
         <iron-pages selected="{{selected}}">
             <div>Page 1</div>
             <div>Page 2</div>
             <div>Page 3</div>
             <div>Page 4</div>
         </iron-pages>
-        <paper-tabs selected="{{selected}}">
-            <paper-tab>Tab 1</paper-tab>
-            <paper-tab>Tab 2</paper-tab>
-            <paper-tab>Tab 3</paper-tab>
-            <paper-tab>Tab 4</paper-tab>
-        </paper-tabs>
+        
+        <div id="block"> </div>
+
         <paper-button>Next Page</paper-button>
+    
     </paper-scroll-header-panel>
+
+    <paper-tabs noBar selected="{{selected}}">
+        <paper-tab>Tab 1</paper-tab>
+        <paper-tab>Tab 2</paper-tab>
+        <paper-tab>Tab 3</paper-tab>
+        <paper-tab>Tab 4</paper-tab>
+    </paper-tabs>
+    
 </template>
 
 <script>
